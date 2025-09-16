@@ -1,0 +1,4 @@
+a:link { color:red; text-decoration: underline;}
+a:visited { color:green; }
+a:hover { color:coral} ::background-color:lightgrey; 
+a:focus { background-color:#948772; }
