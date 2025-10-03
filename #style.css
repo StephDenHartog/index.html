@@ -53,7 +53,7 @@ ul,ol {
     a:hover {
     text-decoration: underline; }
 
-/* Dark Mode Theme */
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
         --background-color: #121212;
