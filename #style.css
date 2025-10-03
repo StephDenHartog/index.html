@@ -1,0 +1,51 @@
+/*Default Light Mode Theme*/
+:root {
+    --background-color: #ffffff;
+    --text-color: #222220;
+    --link-color: #1a0dab;
+    --button-background: #e0e0e0;
+    --button-text-color: #000000;
+    --header-background: #f1f1f1;
+    --footer-background: #f1f1f1;
+}
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: var(--text-color);
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    text-align: center;
+    background-color: var(--secondary-color);
+    padding: 20px 0;
+    boarder-radius: 10px;}
+h2 {
+    border-bottom: 2px solid var(--text-color);
+    color: var(--text-color);
+    margin-top: 1.5em;
+}
+blockquote {
+    background-color: #f9f9f9;
+    color: var(--text-color);
+    padding-left: 1em;
+    border-left: 4px solid var(--text-color);
+    font-style: italic;
+    margin: 1em 0;
+}
+
+ul,ol {
+    line-height: 1.6;
+}
+
+.tips{
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+    margin: 1em 0;
+    padding: 10px 20px;
+    color: #0b5394;}
+    boarder-radius: 5px;
