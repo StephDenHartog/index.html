@@ -49,3 +49,25 @@ ul,ol {
     padding: 10px 20px;
     color: #0b5394;}
     boarder-radius: 5px;
+
+    a {
+    color: var(--link-color);
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var (--background-color);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;}
+    a:hover {
+    text-decoration: underline; }
+
+    /*Dark Mode Theme*/
+    @media (prefers-color-scheme: dark)
+     {:root {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    primary-color: #bb86fc;
+    secondary-color: #03dac6;
+    boarder-color: #3700b3;
+    scrollbar-highlight-color: hsl(210, 30%, 20%);
+    blockquote-background: rgba(255,255,255,0.1)
+    
