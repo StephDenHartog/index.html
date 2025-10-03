@@ -2,11 +2,10 @@
 :root {
     --background-color: #ffffff;
     --text-color: #222220;
-    --link-color: #1a0dab;
-    --button-background: #e0e0e0;
-    --button-text-color: #000000;
-    --header-background: #f1f1f1;
-    --footer-background: #f1f1f1;
+    --secondary-color: rgb(0, 32, 91)
+    --border-color: #33333;
+    --highlight-color: hsl(60, 100%,90%)
+    --blockquote-background: rgba(0,0,255,0.05);    
 }
 body {
     background-color: var(--background-color);
@@ -23,7 +22,7 @@ h1 {
     text-align: center;
     background-color: var(--secondary-color);
     padding: 20px 0;
-    boarder-radius: 10px;}
+    border-radius: 10px;}
 h2 {
     border-bottom: 2px solid var(--text-color);
     color: var(--text-color);
@@ -64,10 +63,4 @@ ul,ol {
     @media (prefers-color-scheme: dark)
      {:root {
     --background-color: #121212;
-    --text-color: #e0e0e0;
-    primary-color: #bb86fc;
-    secondary-color: #03dac6;
-    boarder-color: #3700b3;
-    scrollbar-highlight-color: hsl(210, 30%, 20%);
-    blockquote-background: rgba(255,255,255,0.1)
-    
+        --text-color: #e0e0e0;
