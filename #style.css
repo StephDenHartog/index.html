@@ -2,10 +2,11 @@
 :root {
     --background-color: #ffffff;
     --text-color: #222220;
+    --primary-color: #ba0c2f;
     --secondary-color: rgb(0, 32, 91)
-    --border-color: #33333;
-    --highlight-color: hsl(60, 100%,90%)
-    --blockquote-background: rgba(0,0,255,0.05); }
+    --border-color: #333333;
+    --highlight-color: hsl(60, 100%, 90%)
+    --blockquote-background: rgba(0, 0, 255, 0.05); }
 
 body {
     background-color: var(--background-color);
