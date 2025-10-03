@@ -5,57 +5,50 @@
     --secondary-color: rgb(0, 32, 91)
     --border-color: #33333;
     --highlight-color: hsl(60, 100%,90%)
-    --blockquote-background: rgba(0,0,255,0.05);    
-}
+    --blockquote-background: rgba(0,0,255,0.05); }
+
 body {
     background-color: var(--background-color);
     color: var(--text-color);
-    font-family: Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
     margin: 0;
-    padding: 0;
-}
+    padding: 2em;}
 
 h1 {
-    color: var(--text-color);
+    color: var(--background-color);
     font-family:  Arial, Helvetica, sans-serif;
-    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    font-size: clamp(2rem, 5vw, 3.5rem);
     text-align: center;
     background-color: var(--secondary-color);
-    padding: 20px 0;
-    border-radius: 10px;}
+    padding: 0.5em;
+    border-radius: 12px;}
+
 h2 {
-    border-bottom: 2px solid var(--text-color);
+    border-bottom: 2px solid var(--border-color);
     color: var(--text-color);
-    margin-top: 1.5em;
-}
+    margin-top: 1.5em;}
+
+
 blockquote {
-    background-color: #f9f9f9;
-    color: var(--text-color);
-    padding-left: 1em;
-    border-left: 4px solid var(--text-color);
+    background-color: var(--blockquote-background);
+    color: var(--primary-color);
+    padding: 1em;
+    border-left: 5px solid var(--secondary-color);
     font-style: italic;
-    margin: 1em 0;
-}
+    margin: 1.5em 0;}
+
 
 ul,ol {
-    line-height: 1.6;
-}
+    line-height: 1.6;}
+
 
 .tips{
-    background-color: #e7f3fe;
-    border-left: 6px solid #2196F3;
+    background-color: var(--highlight-color)
+    color: var(--primary-color)
     margin: 1em 0;
-    padding: 10px 20px;
-    color: #0b5394;}
-    boarder-radius: 5px;
+    padding: 0.8em;
+    border-radius: 5px;}
 
-    a {
-    color: var(--link-color);
-    font-weight: bold;
-    text-decoration: none;
-    background-color: var (--background-color);
-    padding: 0.2em 0.4em;
-    border-radius: 4px;}
     a:hover {
     text-decoration: underline; }
 
@@ -63,4 +56,9 @@ ul,ol {
     @media (prefers-color-scheme: dark)
      {:root {
     --background-color: #121212;
-        --text-color: #e0e0e0;
+    --text-color: #e0e0e0;
+    --primary-color: #ff5c5c;
+    --secondary-color: #6fa8dc;
+    --border-color: #bbbbbb;
+    --highlight-color: hsl(210, 30%, 20%);
+    --blockquote-background: rgba(255,255,255,0.1); }
