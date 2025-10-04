@@ -1,10 +1,12 @@
-/* Default (Light Mode) Theme */
+/*  Default Light Mode Theme */
 :root {
     --bg-color: #fff8f8;
     --text-color: #222;
-    --primary-color: #00205B;      /* Deep blue */
-    --accent-color: #BA0C2F;       /* Norwegian red */
+    --primary-color: #00205B;      
+    --accent-color: #BA0C2F;       
     --border-color: #ddd;
+    --blockquote-bg: rgba(244, 162, 162, 0.8);
+    --blockquote-text: #BA0C2F;
 }
 
 /* Global Page Styles */
@@ -36,17 +38,17 @@ h2 {
 
 /* Blockquote */
 blockquote {
-    background-color: rgba(244, 162, 162, 0.8);
-    color: var(--accent-color);
+    background-color: var(--blockquote-bg);
+    color: var(--blockquote-text);
     padding: 1em;
     border-left: 6px solid var(--primary-color);
     font-style: italic;
     margin: 1.5em 0;
+    border-radius: 8px;
 }
 
 /* Lists */
 ul, ol {
-    color: var(--text-color);
     padding-left: 1.5em;
 }
 
@@ -60,13 +62,15 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Dark Mode */
+/* Dark Mode Theme */
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg-color: #1b1b1b;
+        --bg-color: #121212;
         --text-color: #f6f6f6;
-        --primary-color: #4f7fff;   /* Lighter blue for contrast */
-        --accent-color: #ffb3b3;
+        --primary-color: #4f7fff;    
+        --accent-color: #ffb3b3;      
         --border-color: #555;
+        --blockquote-bg: rgba(60, 60, 60, 0.8);
+        --blockquote-text: #ffd9d9;
     }
 }
