@@ -1,64 +1,58 @@
-/* Default Light Mode Theme */
+/* Default (Light Mode) Theme */
 :root {
-    --background-color: #ffffff;
-    --text-color: #222222;
-    --primary-color: #ba0c2f;         /* red accent */
-    --secondary-color: rgb(0, 32, 91); /* blue accent */
-    --border-color: #333333;
-    --highlight-color: hsl(60, 100%, 90%);
-    --blockquote-background: rgba(0, 0, 255, 0.05);
-    --font-main: Georgia, 'Times New Roman', Times, serif;
-    --font-heading: Arial, Helvetica, sans-serif;
+    --bg-color: #fff8f8;
+    --text-color: #222;
+    --primary-color: #00205B;      /* Deep blue */
+    --accent-color: #BA0C2F;       /* Norwegian red */
+    --border-color: #ddd;
 }
 
+/* Global Page Styles */
 body {
-    background-color: var(--background-color);
+    background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: var(--font-main);
+    font-family: Georgia, serif;
     margin: 0;
     padding: 2em;
+    line-height: 1.6;
 }
 
+/* Headings */
 h1 {
-    color: var(--background-color);
-    font-family: var(--font-heading);
+    color: var(--bg-color);
+    font-family: Arial, Helvetica, sans-serif;
     font-size: clamp(2rem, 5vw, 3.5rem);
     text-align: center;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     padding: 0.5em;
     border-radius: 12px;
 }
 
 h2 {
     border-bottom: 2px solid var(--border-color);
-    color: var(--text-color);
+    color: var(--accent-color);
     margin-top: 1.5em;
 }
 
+/* Blockquote */
 blockquote {
-    background-color: var(--blockquote-background);
-    color: var(--primary-color);
+    background-color: rgba(244, 162, 162, 0.8);
+    color: var(--accent-color);
     padding: 1em;
-    border-left: 5px solid var(--secondary-color);
+    border-left: 6px solid var(--primary-color);
     font-style: italic;
     margin: 1.5em 0;
 }
 
+/* Lists */
 ul, ol {
-    line-height: 1.6;
+    color: var(--text-color);
+    padding-left: 1.5em;
 }
 
-.tips {
-    background-color: var(--highlight-color);
-    color: var(--primary-color);
-    margin: 1em 0;
-    padding: 0.8em;
-    border-radius: 5px;
-}
-
+/* Links */
 a {
-    color: var(--secondary-color);
-    font-weight: bold;
+    color: var(--primary-color);
     text-decoration: none;
 }
 
@@ -66,17 +60,13 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Dark Mode Theme */
+/* Dark Mode */
 @media (prefers-color-scheme: dark) {
     :root {
-        --background-color: #121212;
-        --text-color: #e0e0e0;
-        --primary-color: #ff5c5c;    /* softer red */
-        --secondary-color: #6fa8dc;  /* lighter blue */
-        --border-color: #bbbbbb;
-        --highlight-color: hsl(210, 30%, 20%);
-        --blockquote-background: rgba(255, 255, 255, 0.1);
-        --font-main: Georgia, 'Times New Roman', Times, serif;
-        --font-heading: Arial, Helvetica, sans-serif;
+        --bg-color: #1b1b1b;
+        --text-color: #f6f6f6;
+        --primary-color: #4f7fff;   /* Lighter blue for contrast */
+        --accent-color: #ffb3b3;
+        --border-color: #555;
     }
 }
