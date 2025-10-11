@@ -1,99 +1,64 @@
+/* Week 7: Styling an Interactive & Responsive UI Component */
+
+/* Main container */
 #settings-panel {
-    max-width: 600px;
-    margin: 40px auto;
+    max-width: 400px;
+    margin: 50px auto;
     padding: 20px;
-    background-color: #fff8e1;
+    background-color: #f9f9f9;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    font-family: "Trebuchet MS", Arial, sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
 }
 
+/* Title styling */
 #settings-panel h2 {
     text-align: center;
-    margin-bottom: 25px;
-    color: #e65100;
-}
-
-.setting {
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-.setting label {
-    font-weight: bold;
-    color: #444;
-    display: block;
-    font-size: 1.1em;
-}
-
-.movie-img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 8px;
-    margin: 10px 0;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.movie-img:hover {
-    transform: scale(1.03);
-}
-
-.setting p {
-    margin: 8px 0;
     color: #333;
-    line-height: 1.6;
-    text-align: justify;
+    margin-bottom: 20px;
 }
 
-.setting blockquote {
-    font-style: italic;
-    color: #5d4037;
-    border-left: 4px solid #ff9800;
-    padding-left: 10px;
-    margin: 5px 0 0;
+/* Each setting row */
+.setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
 }
 
-.sub-quotes {
-    margin-top: 8px;
-    margin-left: 20px;
-    color: #6d4c41;
-    font-style: italic;
-    font-size: 0.95em;
-    list-style-type: "– ";
-}
-
+/* Combined selector: styling the toggle buttons */
 .setting a {
-    display: inline-block;
-    margin-top: 5px;
-    padding: 6px 14px;
-    background-color: #ffe0b2;
-    color: #000;
     text-decoration: none;
+    background-color: #ddd;
+    color: #000;
+    padding: 6px 14px;
     border-radius: 20px;
     transition: background-color 0.3s, transform 0.2s;
 }
 
+/* Active toggle */
 .setting a.active {
-    background-color: #ff9800;
+    background-color: #4caf50;
     color: white;
 }
 
+/* Hover and focus states for interactivity */
 .setting a:hover {
-    background-color: #ffcc80;
+    background-color: #bbb;
     transform: scale(1.05);
 }
 
 .setting a:focus {
-    outline: 2px solid #ff9800;
+    outline: 2px solid #4caf50;
 }
 
+/* Attribute selector with pseudo-element for external link */
 a[target="_blank"]::after {
     content: ' ↗';
     font-size: 0.9em;
 }
 
+/* Responsive layout for smaller screens */
 @media (max-width: 600px) {
     #settings-panel {
         padding: 15px;
@@ -105,10 +70,12 @@ a[target="_blank"]::after {
     }
 
     .setting {
-        margin-bottom: 20px;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .movie-img {
-        max-width: 100%;
+    .setting a {
+        margin-top: 8px;
     }
 }
+
