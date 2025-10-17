@@ -45,9 +45,9 @@ body {
     color: #555;
 }
 
-/* Hover Effect - demonstrates box-sizing: border-box */
+/* Hover Effect  */
 .product-card:hover {
     border-color: #0078ff;
-    padding: 30px; /* Increases padding but width stays the same */
+    padding: 30px; 
     box-shadow: 0 5px 15px rgba(0, 120, 255, 0.2);
 }
