@@ -1,0 +1,53 @@
+/* Universal Box Model Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Page Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+/* Product Card Styling */
+.product-card {
+    width: 350px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Text Styling */
+.product-card h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.product-card p {
+    color: #555;
+}
+
+/* Hover Effect - demonstrates box-sizing: border-box */
+.product-card:hover {
+    border-color: #0078ff;
+    padding: 30px; /* Increases padding but width stays the same */
+    box-shadow: 0 5px 15px rgba(0, 120, 255, 0.2);
+}
