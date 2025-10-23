@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Steph DenHartog | Home</title>
+    <meta name="description" content="Responsive starter template for a midterm web design project." />
+    <style>
+        :root{
+            --bg:#f7f9fb; --card:#fff; --accent:#0b74de; --muted:#6b7280;
+            --radius:10px; --pad:1rem;
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            color: #0f1724;
+        }
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{
+            margin:0; background:var(--bg); padding:2rem; -webkit-font-smoothing:antialiased;
+            display:flex; align-items:flex-start; justify-content:center;
+        }
+        .container{
+            width:min(1100px,100%); background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.95));
+            border-radius:var(--radius); box-shadow:0 6px 30px rgba(16,24,40,0.08); overflow:hidden;
+        }
+        header{
+            display:flex; align-items:center; justify-content:space-between; gap:1rem;
+            padding:1rem 1.25rem; background:var(--card); border-bottom:1px solid #eef2f7;
+        }
+        .brand{display:flex;gap:0.75rem;align-items:center}
+        .logo{width:44px;height:44px;background:linear-gradient(135deg,var(--accent),#6a9cff);border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+        nav{display:flex;gap:0.5rem;align-items:center}
+        nav a{color:var(--muted);text-decoration:none;padding:0.35rem 0.6rem;border-radius:6px;font-weight:600}
+        nav a:hover{background:#f1f5f9;color:var(--accent)}
+        .hero{
+            display:grid; grid-template-columns:1fr 360px; gap:1.25rem; padding:1.5rem; align-items:center;
+        }
+        .hero-left h1{margin:0 0 .5rem 0;font-size:1.6rem}
+        .hero-left p{margin:0;color:var(--muted)}
+        .card{background:var(--card); padding:var(--pad); border-radius:12px; box-shadow:0 4px 20px rgba(2,6,23,0.04)}
+        .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;padding:1rem}
+        .feature{padding:0.75rem;border-radius:8px;background:linear-gradient(180deg,#fff,#fcfdff);border:1px solid #f1f5f9}
+        footer{padding:1rem 1.25rem;color:var(--muted);font-size:0.9rem;border-top:1px solid #eef2f7;background:var(--card)}
+        .cta{background:var(--accent);color:white;padding:.55rem .85rem;border-radius:8px;text-decoration:none;font-weight:700}
+        .mobile-toggle{display:none}
+        @media (max-width:880px){
+            .hero{grid-template-columns:1fr; padding:1rem}
+            nav{display:none}
+            .mobile-toggle{display:inline-flex}
+        }
+    </style>
+</head>
+<body>
+    <div class="container" role="document">
+        <header>
+            <div class="brand">
+                <div class="logo" aria-hidden="true">MD</div>
+                <div>
+                    <div style="font-weight:800">Midterm Project</div>
+                    <div style="font-size:0.85rem;color:var(--muted)">Web Design 2025</div>
+                </div>
+            </div>
+
+            <nav aria-label="Primary">
+                <a href="#overview">Overview</a>
+                <a href="#features">Features</a>
+                <a href="#contact">Contact</a>
+                <a class="cta" href="#get-started">Get started</a>
+            </nav>
+
+            <button class="mobile-toggle" aria-expanded="false" aria-label="Toggle menu" onclick="toggleNav(this)">
+                ☰
+            </button>
+        </header>
+
+        <main>
+            <section class="hero" id="overview">
+                <div class="hero-left">
+                    <div class="card">
+                        <h1>Responsive HTML starter for your midterm</h1>
+                        <p>Clean, accessible and mobile-first layout to jumpstart your project. Edit the file at index.html and add styles or scripts as needed.</p>
+                        <div style="margin-top:.85rem;display:flex;gap:.5rem;align-items:center">
+                            <a class="cta" href="#features">Explore features</a>
+                            <a href="#contact" style="color:var(--muted);text-decoration:none;padding:.45rem .6rem;border-radius:8px">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <aside>
+                    <div class="card" style="display:flex;flex-direction:column;gap:.6rem">
+                        <strong>Project details</strong>
+                        <div style="font-size:.95rem;color:var(--muted)">
+                            - File: index.html<br>- Location: web_design_2025/Midterm_project<br>- Tips: separate CSS/JS into files for larger projects
+                        </div>
+                    </div>
+                </aside>
+            </section>
+
+            <section class="card" id="features" style="margin:1rem">
+                <h2 style="margin-top:0">Key features</h2>
+                <div class="feature-grid" aria-hidden="false">
+                    <div class="feature">
+                        <strong>Semantic HTML</strong>
+                        <div style="color:var(--muted);font-size:.95rem">Use header, nav, main, section and footer for structure and accessibility.</div>
+                    </div>
+                    <div class="feature">
+                        <strong>Responsive layout</strong>
+                        <div style="color:var(--muted);font-size:.95rem">Mobile-first grid and media queries adapt to different viewports.</div>
+                    </div>
+                    <div class="feature">
+                        <strong>Accessible controls</strong>
+                        <div style="color:var(--muted);font-size:.95rem">Buttons include aria attributes for better assistive tech support.</div>
+                    </div>
+                    <div class="feature">
+                        <strong>Ready to customize</strong>
+                        <div style="color:var(--muted);font-size:.95rem">Split styles into a separate stylesheet and add components as needed.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="card" style="margin:1rem">
+                <h2 style="margin-top:0">Contact</h2>
+                <form onsubmit="event.preventDefault(); alert('Form submitted (demo)');" style="display:grid;gap:.5rem">
+                    <label>
+                        Name
+                        <input type="text" name="name" required style="width:100%;padding:.5rem;border-radius:8px;border:1px solid #e6eef8" />
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" name="email" required style="width:100%;padding:.5rem;border-radius:8px;border:1px solid #e6eef8" />
+                    </label>
+                    <label>
+                        Message
+                        <textarea name="message" rows="4" style="width:100%;padding:.5rem;border-radius:8px;border:1px solid #e6eef8"></textarea>
+                    </label>
+                    <div style="display:flex;gap:.5rem;align-items:center">
+                        <button class="cta" type="submit">Send</button>
+                        <div style="color:var(--muted);font-size:.9rem">We won't share your details.</div>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;">
+                <div>© <span id="year"></span> Midterm Project</div>
+                <div style="color:var(--muted)">Built with semantic HTML & simple CSS</div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Small utilities for the starter template
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function toggleNav(btn){
+            const nav = document.querySelector('nav');
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', String(!expanded));
+            if(!expanded){
+                nav.style.display = 'flex';
+                nav.style.position = 'absolute';
+                nav.style.right = '1rem';
+                nav.style.top = '72px';
+                nav.style.background = 'white';
+                nav.style.padding = '.75rem';
+                nav.style.borderRadius = '8px';
+                nav.style.boxShadow = '0 8px 30px rgba(2,6,23,0.08)';
+            } else {
+                nav.style.display = '';
+                nav.style.position = '';
+                nav.style.right = '';
+                nav.style.top = '';
+                nav.style.background = '';
+                nav.style.padding = '';
+                nav.style.borderRadius = '';
+                nav.style.boxShadow = '';
+            }
+        }
+    </script>
+</body>
+</html>
