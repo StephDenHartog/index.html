@@ -11,8 +11,13 @@
 <body>
   <header>
     <div class="brand">
-      <!-- Profile image (updated to the uploaded JPEG file) -->
-      <img src="images/profile.jpeg" alt="Portrait of Steph DenHartog" class="profile-img" loading="lazy" width="140" height="140" />
+      <!-- Profile image: AVIF with JPEG fallback -->
+      <a href="contact.html" aria-label="Contact Steph DenHartog">
+        <picture>
+          <source srcset="images/profile.avif" type="image/avif" />
+          <img src="images/profile.jpeg" alt="Portrait of Steph DenHartog" class="profile-img" loading="lazy" width="140" height="140" />
+        </picture>
+      </a>
       <h1>Steph DenHartog</h1>
     </div>
 
