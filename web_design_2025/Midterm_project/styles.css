@@ -1,5 +1,7 @@
 /* ========== Base Reset ========== */
-*, *::before, *::after { box-sizing: border-box; }
+*, *::before, *::after { 
+  box-sizing: border-box; 
+}
 
 /* ========== Light Theme ========== */
 :root {
@@ -90,28 +92,14 @@ section {
   text-align: center;
 }
 
-/* Footer */
-footer {
-  background: var(--primary);
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+/* Portfolio Articles with Separation */
+article {
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* ========== Responsive Design ========== */
-@media (max-width: 700px) {
-  header { flex-direction: column; text-align: center; }
-
-  .profile-img {
-    width: 90px;
-    height: 90px;
-  }
-
-  nav a {
-    display: inline-block;
-    margin: 0.25rem;
-  }
-
-  main { padding: 0.5rem; }
-}
+article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(
