@@ -39,6 +39,8 @@ header {
   color: white;
   text-align: center;
   padding: 1rem 0;
+  background-image: url(https://www.transparenttextures.com/patterns/cubes.png); 
+  background-size: contain;
 }
 
 .header-content img {
@@ -51,11 +53,7 @@ header {
   object-fit: cover;
 }
 
-.tagline {
-  margin: 0.25rem 0 1rem 0;
-  font-size: 0.95rem;
-  color: #f0f0f0;
-}
+
 
 /* ========= Navigation ========= */
 nav {
@@ -77,8 +75,16 @@ nav a.active {
   background: var(--accent);
   color: #000;
 }
+/* ========= Hero Design ========= */
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
 
-/* ========= Main Layout ========= */
+/* ===== Sections ===== */
 main {
   max-width: 900px;
   margin: 2rem auto;
@@ -95,16 +101,19 @@ section {
 }
 
 /* ========= Articles (Portfolio Items) ========= */
-article {
-  border-bottom: 2px solid var(--accent);
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
-}
+.project-img
+width: 100%;
+max-width: 400px;
+height: auto;
+border-radius: 8px;
+margin-bottom: 0.5rem;    
+filter:greyscale(100%);
+transition::all 0.4s ease-in-out;
 
-article:last-child {
-  border-bottom: none;
+.project-img:hover {
+  filter:greyscale(0%);
+  transform:scale(1.05);
 }
-
 /* ========= Contact Form ========= */
 .contact-form {
   max-width: 500px;
