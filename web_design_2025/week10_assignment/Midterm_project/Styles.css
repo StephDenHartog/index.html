@@ -101,18 +101,21 @@ section {
 }
 
 /* ========= Articles (Portfolio Items) ========= */
-.project-img
-width: 100%;
-max-width: 400px;
-height: auto;
-border-radius: 8px;
-margin-bottom: 0.5rem;    
-filter:greyscale(100%);
-transition::all 0.4s ease-in-out;
+.project-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  filter: grayscale(100%);
+  transition: all 0.4s ease-in-out;
+}
 
 .project-img:hover {
-  filter:greyscale(0%);
-  transform:scale(1.05);
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
 }
 /* ========= Contact Form ========= */
 .contact-form {
