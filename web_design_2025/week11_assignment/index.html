@@ -3,42 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 11 Assignment</title>
+    <title>Quarterly Sales Report</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome</h1>
-    </header>
-    <main>
-       <p>
-        <div>
+   <div class="table-container">
             <table>
-                Quarterly Sales Report
-                <caption></caption>
+                <caption>Quarterly Sales Report</caption>
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Q1</th>
-                        <th>Q2</th>
-                        <th>Q3</th>
-                        socpe="col">                   </tr>
+                        <th scope="col">Q1</th>
+                        <th scope="col">Q2</th>
+                        <th scope="col">Q3</th>
+                  </tr>
+                  </thead>
                     <tbody>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        socpe="row">                       
+                        <tr>
+                        <th scope="row">North Region</th>
+                        <td>1597</td>
+                        <td>7549</td>
+                        <td>4697</td>
+                        <td>1235</td>
+                        <th scope="row">South Region</th>
+                        <td>4545</td>
+                        <td>7878</td>
+                        <td>7485</td>
+                        <td>1425</td>
+                        <th scope="row">East Region</th>
+                        <td>3164</td>
+                        <td>6497</td>
+                        <td>8585</td>
+                        <td colspan="2">1594</td>
+                        </tr>
+                        </tbody>  
+                                        
                         <tfoot>
                             <tr>
+                                <th>Total</th>
                                 <th></th>
-                                <th></th>
-                                <th></th>
-                                socpe="row">                           
-                            </tr>
-            </table>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>                         
+         </tr>
+        </tfoot>
+         </table>
         </div>
-    </main>
-    <footer>
-        <p>&copy; 2024</p>
-    </footer>
 </body>
 </html>
