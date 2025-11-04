@@ -5,8 +5,8 @@
 
 /*Color*/
 :root {
-    --primary-color: #4A90E2;
-    --secondary-color: #50E3C2;
+    --primary-color: #061fc1;
+    --secondary-color: #07b61e;
     --background-color: #F5F7FA;
     --text-color: #333333;
     --font:var(--font) segoe ui, tahoma, sans-serif; 
@@ -45,6 +45,7 @@ img {
   height: 200px;
   border-radius: 50%;  
   object-fit: cover;   
+  border: 4px solid; color :#333333
 }
 
 /*Navigation*/
