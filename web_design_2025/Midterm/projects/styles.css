@@ -39,6 +39,14 @@ header-content img {
     width: 100px;
     border-radius: 50%;
 }
+/*images*/
+img {
+  width: 200px;        
+  height: 200px;
+  border-radius: 50%;  
+  object-fit: cover;   
+}
+
 /*Navigation*/
 nav {
     background-color: var(--secondary-color);
