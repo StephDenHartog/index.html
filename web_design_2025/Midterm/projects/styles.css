@@ -1,5 +1,5 @@
-/*Base */
-:: ::before, ::after {
+/* Base */
+*, ::before, ::after {
     box-sizing: border-box;
 }
 
@@ -9,7 +9,7 @@
     --secondary-color: #07b61e;
     --background-color: #F5F7FA;
     --text-color: #333333;
-    --font:var(--font) segoe ui, tahoma, sans-serif; 
+    --font:var(--font) segoe ui, tahoma, sans-serif;
 }
 /*Dark Mode*/
 @media (prefers-color-scheme: dark) {
@@ -35,8 +35,9 @@ header {
     padding: 1rem 0;
     text-align: center;
 }
-header-content img {
+.Header-content img {
     width: 100px;
+    height: 100px;
     border-radius: 50%;
 }
 /*images*/
@@ -44,7 +45,7 @@ img {
   width: 200px;        
   height: 200px;
   border-radius: 50%;  
-  object-fit: cover;   
+  object-fit: cover;  
   border: 4px solid; color :#333333
 }
 
@@ -69,10 +70,10 @@ nav a:hover {
 }
 /*Layout*/
 main {
-    max-width: 900 px
+    max-width: 900 px;
     margin: 2rem auto;
     padding: 1rem;
-    text-align; center;
+    text-align: center;
 }
 
 section {
@@ -119,11 +120,11 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 600px) {
-    .header-content img {
+    .Header-content img {
         width: 80px;
         height: 80px;
     }
-    main () {
+    main {
         padding: 0.5rem;
     }
 }
