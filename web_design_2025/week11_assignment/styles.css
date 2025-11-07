@@ -35,7 +35,7 @@ body {
 /* Header  */
 header {
   background-color: var(--primary-color);
-    color: white;
+    color: rgb(11, 11, 11);
     padding: 1rem 0;
     text-align: center;
   background-image: url(https://www.toptal.com/designers/subtlepatterns/prism/); 
