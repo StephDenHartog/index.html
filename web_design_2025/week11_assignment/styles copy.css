@@ -148,6 +148,18 @@ button:hover {
   opacity: 0.9;
 }
 
+/*Sales*/
+main { margin 5rem grid-auto-flow: ;}
+table {
+  width: 100%;
+  border: thin black solid;
+  margin-bottom: 2rem;
+}
+Td=, th {
+  border: thin black solid;
+  padding: 0.5rem;
+  text-align: left;
+}
 /* Footer  */
 footer {
   background: var(--primary);
