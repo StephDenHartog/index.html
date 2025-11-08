@@ -146,7 +146,7 @@ button:hover {
 main { margin 5rem grid-auto-flow: ;}
 table {
   max-width: 950px;
-  border: thin black solid;
+  border: thin rgb(245, 239, 239) solid;
   margin-bottom: 2rem;
 }
 Td=, th {
