@@ -5,8 +5,8 @@
 
 /*  Color */
 :root {
-   --primary-color: #3f3f3f;
-    --secondary-color: #144602;
+   --primary-color: #333437;
+    --secondary-color: #03490c;
     --background-color: #F5F7FA;
     --text-color: #333333;
     --font:var(--font) segoe ui, tahoma, sans-serif; 
@@ -34,37 +34,36 @@ body {
 
 /* Header  */
 header {
+  width: 100%;
   background-color: var(--primary-color);
-    color: rgb(11, 11, 11);
-    padding: 1rem 0;
-    text-align: center;
-  background-image: url(https://www.toptal.com/designers/subtlepatterns/prism/); 
-  background-size: contain;
+  text-align: center;
+  padding: 0;
 }
 .header-content img {
   width: 100%;
-  height: auto;
-  border: 0;
+  height: 300px;
   object-fit: cover;
   display: block;
+  margin: 0; 
+  padding: 0;
+  border: none
 }
 
 
 /* images*/
 img {
-  width: 950px;        
-  height: 200px;
- 
   object-fit: cover;   
   border: 4px solid; color :#333333
 }
 
 /* Nav */
 nav {
-    background-color: var(--secondary-color);
-    display: flex;
-    padding: 0.5rem 0;
-    text-align: center;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  width: 100%;
+  margin: 0;
 }
 
 nav a {
@@ -75,7 +74,7 @@ nav a {
     border-radius: 4px;}
 
 nav a:hover {
-    background-color: rgba(240, 17, 17, 0.475);
+    background-color: rgba(246, 246, 3, 0.475);
     padding: 0.5rem;}
 
 nav a.active {
@@ -95,7 +94,7 @@ section {
 }
 
 
-/* Portfolio  */
+/* Products  */
 article {
     border-bottom: 2px solid var(--primary-color);
     margin-bottom: 1.0rem;
@@ -116,6 +115,31 @@ article {
   filter: grayscale(0%);
   transform: scale(1.05);
 }
+/* Table  */
+.table-container {
+  display: flex;             
+  justify-content: center;        
+  margin: 5rem auto;
+  width: 10%;
+  padding: 1.5rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: auto;              
+  text-align: left;
+}
+
+caption {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+th, td {
+  border: 3px solid #e7e2e2;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;      
+}
 
 /* contact form  */
 .contact-form {
@@ -124,7 +148,6 @@ article {
   color: whitesmoke;
   
 }
-
 
 /*  Buttons  */
 button {
@@ -142,18 +165,6 @@ button:hover {
   opacity: 0.9;
 }
 
-/*Sales*/
-main { margin 5rem grid-auto-flow: ;}
-table {
-  max-width: 950px;
-  border: thin rgb(245, 239, 239) solid;
-  margin-bottom: 2rem;
-}
-Td=, th {
-  border: thin black solid;
-  padding: 0.5rem;
-  text-align: left;
-}
 /* Footer  */
 footer {
   background: var(--primary);
