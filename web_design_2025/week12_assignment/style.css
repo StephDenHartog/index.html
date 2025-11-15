@@ -1,63 +1,45 @@
-.table-container {
-    width: 80%;
-    margin: auto;
-    border: 2px solid #000;
-    padding: 10px;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
-    text-overflow:auto;
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
+/* Tables*/
+table { width: 100%;
+        border-collapse: collapse}
 
-th, td {border: 1px solid #0e0e0e;
-        padding: 0.75px;
-        text-align: center;}
-th{ text-align: left;}
+/*Caption */
+caption {font-size: 1.5rem;
+         margin: 1.5rem 0;
+         font-weight: bold;
+         text-align: center;}
+
+/* Border padding */
+th, td {border: 2px solid #000;
+        padding: 0.5rem;}
+
+/* Text alignment */
+th {text-align: left;}
 tbody td {text-align: right;}
-tbody tr:nth-child(even) {background-color: #f9f9f9;}
-thead, tfoot {background-color: #e0e0e0;
-              font-weight: bold;}
-<ul class="main-navigation">
-    <li><a href="#>Home</a></li>
-    <li><a href="#>About</a></li>
-    <li><a href="#>Services</a></li>
-    <li><a href="#S>Contact</a></li>
-</ul>
+tbody tr{transition: background-color .5s ease-in-out;}
+tbody tr:hover {background-color: #0df055;}
 
-/*Navigation*/
-.main-navigation {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    background-color: #235ea8;
-    padding: .75rem 
-    margin: 0;}
-.main-navigation li {margin: 0 1 rem;}
-.main-navigation a {
-    display:inline-block;
-    padding: 0.5rem 1rem;
-    background color: #ffffff;
-    border-radius: 5 px
-    color: #0b74de;
-    text-decoration: none;}
+/* Zebra striping  */
+tbody tr:nth-child(even) {background-color: #f2f2f2;}
 
-/*Transition effect*/
-.main-navigation a:hover {
-    background-color: #0b74de;
-    main-navigation align-self: focus;
-    background-color: #003f92;
-    color: #ffffff;}
+/* header + footer */
+thead,tfoot {background-color: #087df2;
+             font-weight: bold;}
 
-/* Responsive adjustment*/
-@media (max-width: 600px) {
-    .table-container {
-        width: 100%;
-        padding: 5px;
-    }
-    th, td {
-        padding: 6px;
-        font-size: 0.9em;
-    }
-}
+/* Nav Style */
+nav ul {display: flex;
+        list-style: none; 
+        padding: 1rem;
+        background-color: #0b74de;}
+
+nav li {padding: 1rem;
+        background-color: rgb(139, 185, 226);
+        margin-right: 1rem; 
+        border-radius: 6px;}
+
+
+/* Hover and focus */
+.main-navigation a:hover,
+{background-color: green;
+ text-decoration: none;}
+
+
