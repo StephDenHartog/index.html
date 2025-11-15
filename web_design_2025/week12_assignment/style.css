@@ -20,10 +20,10 @@ tbody tr:nth-child(even) {background-color: #f9f9f9;}
 thead, tfoot {background-color: #e0e0e0;
               font-weight: bold;}
 <ul class="main-navigation">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="#>Home</a></li>
+    <li><a href="#>About</a></li>
+    <li><a href="#>Services</a></li>
+    <li><a href="#S>Contact</a></li>
 </ul>
 
 /*Navigation*/
