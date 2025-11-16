@@ -38,8 +38,8 @@ nav li {padding: 1rem;
 
 
 /* Hover and focus */
-.main-navigation a:hover,
-{background-color: green;
- text-decoration: none;}
+tbody tr:hover,
+tbody tr:hover th,
+tbody tr:hover td {background-color: #0ff107;}
 
 
