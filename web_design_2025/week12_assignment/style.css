@@ -1,16 +1,18 @@
 /* Tables*/
 table { width: 100%;
-        border-collapse: collapse}
+        border-collapse: collapse;
+        font-family:Georgia, 'Times New Roman', Times, serif  ;}
 
 /*Caption */
 caption {font-size: 1.5rem;
          margin: 1.5rem 0;
          font-weight: bold;
+         font-family: cursive;
          text-align: center;}
 
 /* Border padding */
 th, td {border: 2px solid #000;
-        padding: 0.5rem;}
+        padding: .75rem;}
 
 /* Text alignment */
 th {text-align: left;}
@@ -19,7 +21,7 @@ tbody tr{transition: background-color .5s ease-in-out;}
 tbody tr:hover {background-color: #0df055;}
 
 /* Zebra striping  */
-tbody tr:nth-child(even) {background-color: #f2f2f2;}
+tbody tr:nth-child(odd) {background-color: #a8a6a6;}
 
 /* header + footer */
 thead,tfoot {background-color: #087df2;
@@ -28,8 +30,10 @@ thead,tfoot {background-color: #087df2;
 /* Nav Style */
 nav ul {display: flex;
         list-style: none; 
+        font-family: cursive;
         padding: 1rem;
-        background-color: #0b74de;}
+        background-color: #0b74de;
+        border-radius: 10px; }
 
 nav li {padding: 1rem;
         background-color: rgb(139, 185, 226);
