@@ -1,51 +1,31 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Product Cards</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+/*Reset*/
+body {margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
 
-<body>
+.dashboard {display:flex; flex-direction: column; min-height: 100v;}
 
-<div class="dashboard">
-    <header>
-        <h1>Our Products</h1> /* add logo */
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </header>
+/*Header*/
+{display: flex; justify-content: space-between; align-items: center; padding: 1rem; background-color: #333; color: white;}
 
-<div class="content-wrapper">
-    <aside class="sidebar">
-    <h3>Sidebar</h3>
-        <ul>
-            <li><a href="#">Category 1</a></li>
-            <li><a href="#">Category 2</a></li>
-            <li><a href="#">Category 3</a></li>
-            <li><a href="#">Category 4</a></li>
-        </ul>
-    </aside>
-<main class="main-content">
-    <h2>Dashboard Cards</h2>
+/*Header ul*/
+{display: flex; list style: none; gap: 1rem; margin: 0; padding: 0;}
 
-<div class="product-card">
+/*.Content-Wrapper*/
+{display: flex; flex:1;}
 
-    <div class="product-card">Card 1</div>
-    <div class="product-card">Card 2</div>
-    <div class="product-card">Card 3</div>  
-    <div class="product-card">Card 4</div>
-    <div class="product-card">Card 5</div>
-    <div class="card special-card">Special Card</div>
-</div>
+/*Sidebar*/
+{width: 200 px; background: #f4f4f4; padding: 1rem;}
 
-</main>
+/*Main Content*/
+{flex: 1; padding: 1rem;}
 
-</div>
+/*.Card-Container*/
+{display: flex; flex-wrap: wrap; gap: 1rem;}
 
-</body>
-</html>
+/*Card*/
+{background: white; border: 1px solid #ddd; padding: 1rem; flex: 1 1 300px; transition: transform 0.3s ease, box-shadow 0.3s ease;} 
+
+/*Card Hover Effect*/
+{transform: scale(1.05); translateY(-5px); box-shadow: 0 8 px 15px rgba(0,0,0,0,0.2);}
+
+/*Special Card*/
+{align-self: flex-end;}
