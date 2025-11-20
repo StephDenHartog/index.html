@@ -1,31 +1,93 @@
-/*Reset*/
-body {margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+/* ========== GLOBAL RESET ========== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
-.dashboard {display:flex; flex-direction: column; min-height: 100v;}
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-/*Header*/
-{display: flex; justify-content: space-between; align-items: center; padding: 1rem; background-color: #333; color: white;}
+/* ========== HEADER (Flexbox) ========== */
+header {
+    display: flex; 
+    justify-content: space-between; /* Required */
+    align-items: center;
+    background: #0b74de;
+    color: white;
+    padding: 1rem;
+}
 
-/*Header ul*/
-{display: flex; list style: none; gap: 1rem; margin: 0; padding: 0;}
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
 
-/*.Content-Wrapper*/
-{display: flex; flex:1;}
+/* ========== LAYOUT ========== */
+.content-wrapper {
+    display: flex;  /* Sidebar + Main content side by side */
+    flex: 1;
+}
 
-/*Sidebar*/
-{width: 200 px; background: #f4f4f4; padding: 1rem;}
+.sidebar {
+    width: 200px;
+    background: #f0f0f0;
+    padding: 1rem;
+}
 
-/*Main Content*/
-{flex: 1; padding: 1rem;}
+.main-content {
+    flex: 1;
+    padding: 1.5rem;
+}
 
-/*.Card-Container*/
-{display: flex; flex-wrap: wrap; gap: 1rem;}
+/* ========== CARD CONTAINER (Flexbox) ========== */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Required for assignment */
+    gap: 1rem;
+}
 
-/*Card*/
-{background: white; border: 1px solid #ddd; padding: 1rem; flex: 1 1 300px; transition: transform 0.3s ease, box-shadow 0.3s ease;} 
+/* ========== CARD STYLING ========== */
+.card {
+    display: flex;              /* So we can push the button down */
+    flex-direction: column;     /* Vertical layout/card structure */
 
-/*Card Hover Effect*/
-{transform: scale(1.05); translateY(-5px); box-shadow: 0 8 px 15px rgba(0,0,0,0,0.2);}
+    background: white;
+    border: 1px solid #ddd;
+    padding: 1rem;
 
-/*Special Card*/
-{align-self: flex-end;}
+    flex: 1 1 300px;            /* Required: flex-grow flex-shrink flex-basis */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover transform & shadow = REQUIRED */
+.card:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* SPECIAL CARD */
+.special-card {
+    align-self: flex-end; /* Overrides alignment */
+}
+
+/* ========== CARD BUTTON STYLING ========== */
+.card-button {
+    background: #0b74de;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-top: auto;   /* PUSHES IT TO BOTTOM OF CARD */
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.card-button:hover {
+    background: #094c8a;
+    transform: scale(1.05);
+}
