@@ -1,4 +1,4 @@
-/* ========== GLOBAL RESET ========== */
+/*  GLOBAL RESET  */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -10,7 +10,7 @@ body {
     min-height: 100vh;
 }
 
-/* ========== HEADER (Flexbox) ========== */
+/*  HEADER  */
 header {
     display: flex; 
     justify-content: space-between; /* Required */
@@ -28,9 +28,9 @@ header ul {
     padding: 0;
 }
 
-/* ========== LAYOUT ========== */
+/*  LAYOUT*/
 .content-wrapper {
-    display: flex;  /* Sidebar + Main content side by side */
+    display: flex;  
     flex: 1;
 }
 
@@ -45,23 +45,23 @@ header ul {
     padding: 1.5rem;
 }
 
-/* ========== CARD CONTAINER (Flexbox) ========== */
+/*  CARD CONTAINER (Flexbox) */
 .card-container {
     display: flex;
-    flex-wrap: wrap; /* Required for assignment */
+    flex-wrap: wrap; 
     gap: 1rem;
 }
 
-/* ========== CARD STYLING ========== */
+/* CARD STYLING  */
 .card {
-    display: flex;              /* So we can push the button down */
-    flex-direction: column;     /* Vertical layout/card structure */
+    display: flex;             
+    flex-direction: column;    
 
     background: white;
     border: 1px solid #ddd;
     padding: 1rem;
 
-    flex: 1 1 300px;            /* Required: flex-grow flex-shrink flex-basis */
+    flex: 1 1 300px;          
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -73,17 +73,17 @@ header ul {
 
 /* SPECIAL CARD */
 .special-card {
-    align-self: flex-end; /* Overrides alignment */
+    align-self: flex-end; 
 }
 
-/* ========== CARD BUTTON STYLING ========== */
+/* CARD BUTTON STYLING */
 .card-button {
     background: #0b74de;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
     cursor: pointer;
-    margin-top: auto;   /* PUSHES IT TO BOTTOM OF CARD */
+    margin-top: auto;   
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
