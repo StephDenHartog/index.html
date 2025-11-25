@@ -1,4 +1,4 @@
-/*  GLOBAL RESET  */
+/*  RESET  */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -13,7 +13,7 @@ body {
 /*  HEADER  */
 header {
     display: flex; 
-    justify-content: space-between; /* Required */
+    justify-content: space-between; 
     align-items: center;
     background: #0b74de;
     color: white;
@@ -45,7 +45,7 @@ header ul {
     padding: 1.5rem;
 }
 
-/*  CARD CONTAINER (Flexbox) */
+/*  CARD CONTAINER */
 .card-container {
     display: flex;
     flex-wrap: wrap; 
@@ -65,7 +65,7 @@ header ul {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover transform & shadow = REQUIRED */
+/* Hover/shadow  */
 .card:hover {
     transform: scale(1.05) translateY(-5px);
     box-shadow: 0 8px 15px rgba(0,0,0,0.2);
@@ -91,3 +91,17 @@ header ul {
     background: #094c8a;
     transform: scale(1.05);
 }
+/* Small Screens */
+{@media (max-width: 640px) 
+.gallery-container
+flex-direction: column;
+align-items: center;
+width:100%}
+
+product card
+{widthj:100%;
+    margin-left:0.5rem;
+    margin-right:0.5rem;
+    flex-grow: 2;
+    flex-basis:300px;
+    flex: 1 1 300px;}
