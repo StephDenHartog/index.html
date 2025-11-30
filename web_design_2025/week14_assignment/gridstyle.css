@@ -1,213 +1,177 @@
-Gridstyle.css
-/* Grid Style Sheet */
-:root {
-    header-bg-color: #4CAF50;
-    nav-bg-color: #333;
-    sidebar-bg-color: #f4f4f4;
-    main-bg-color: #ffffff;
-    footer-bg-color: #222;
-    accent-color: ;
-    text-light: #ffffff;
-    text-dark: #000000;
-    padding: ;}
-
-    {Box-sizing: border-box;
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+}
+body {
     margin: 0;
-    padding: 0;}
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
 
-    {body
-    font-family: Arial, sans-serif;}
+/* Main Area */
+.main-content {
+    grid-area: main;
+    background: white;     
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
 
- /* Grid Container */
+/* Heading */
+.main-content h2 {
+    color: #3f8d57;
+    margin-bottom: 0.5rem;
+    }
+
+/* Body text spacing */
+.main-content p {
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* Blockquote box */
+.info-box {
+    background: #e5e6e8;                 
+    padding: 1rem;
+    border-left: 4px solid #05a73e;        
+    margin-top: 1rem;
+    border-radius: 6px;
+}
+
+/* Grid Container */
+.grid-container {
     display: grid;
-    grid-template-rows:auto auto 1fr auto;
-    grid-template-columns: 200px 1fr 1fr;
+    min-height: 100vh;
+    padding: 1rem;
+    gap: 1rem;
+
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
 
     grid-template-areas:
-        "header header header"
-        "nav nav nav"
-        "sidebar main main"
-        "footer footer footer";
+        "header header"
+        "sidebar main"
+        "footer footer";
+}
 
- /*Grid item placement*/
-    .header {
-        grid-area: header;
-        background-color: var(--header-bg-color);
-        color: var(--text-light);
-        padding: var(--padding);
-        text-align: center;
-    }
-    .navigation {
-        grid-area: nav;
-        background-color: var(--nav-bg-color);
-        color: var(--text-light);
-        padding: var(--padding);
-    }
-    .sidebar {
-        grid-area: sidebar;
-        background-color: var(--sidebar-bg-color);
-        color: var(--text-dark);
-        padding: var(--padding);
-    }
-    .main-content {
-        grid-area: main;
-        background-color: var(--main-bg-color);
-        color: var(--text-dark);
-        padding: var(--padding);
-    }
-    .footer {
-        grid-area: footer;
-        background-color: var(--footer-bg-color);
-        color: var(--text-light);
-        padding: var(--padding);
-        text-align: center;
-    }
-/* style items */
-    .grid-item {
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        margin: 10px;
-        padding: 0.5rem;
-        color: #000000;
-        font-size: large;
-    }
+/* Grid Area */
+.grid-item.header {
+    grid-area: header;
+    background: #20a308;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    font-family: cursive;
+}
 
-/* Header style */
-    .header{
-        background-color: #000000;
-        color var:--text-light;
-        text-align: center;
-        padding: 1rem;
-        font-weight: bold;
-        margin: 0;}
-    
-/*Navigation style*/
-    .navigation{
-        background-color: #333333;
-        color: var:--text-light;
-        display: flex;
-        gap: 15px;
-        padding: 1rem;
-        font-size: medium;}
-    .navigation a{
-        color: var:--text-light;
-        text-decoration: none;
-        font-weight: bold;
-        transition; color 0.3s;}
-    .navigation a:hover{
-        color: var:--accent-color;}
+.grid-item.sidebar {
+    grid-area: sidebar;
+    background: #eeeeee;
+    padding: 1rem;
+    border-radius: 3px
+}
 
-/* Sidebar style */
-    .sidebar{
-        background-color: #f4f4f4;
-        color: var:--text-dark;
-        padding: 1rem;
-        font-size: medium;}
-    .sidebarul{
-        list-style-type: none;
-        margin-top: ;}
-    .sidebarul li{
-        padding: 0.25rem 0;
-        border-bottom: 1px solid #ccc;}
-/*Footer style*/
-    .footer{
-        background-color: #222222;
-        color: var:--text-light;
-        text-align: center;
-        padding: 1rem;
-        font-size: small;
-        margin: 0;}
- /* Flexbox */
-    .product-card{
-        width: 300px;
-        margin:auto
-        display: flex;  
+.grid-item.main-content {
+    grid-area: main;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.grid-item.footer {
+    grid-area: footer;
+    background: #06ca3a;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+/* Sidebar list */
+.sidebar ul {
+    font-style: oblique;
+    list-style: none;
+    padding-left: 0;
+}
+.sidebar li {
+    padding: 0.5rem;
+    border-bottom: 1px solid gray;
+}
+
+/* Flexbox header */
+.navigation ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    padding: 0;
+    font-family:cursive;
+}
+.navigation a {
+    color: rgb(7, 39, 247);
+    text-decoration: none;
+    font-weight: bold;
+}
+.navigation a:hover {
+    text-decoration: underline;
+       
+}
+
+/* Product Cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: .7rem;
+}
+
+.card {
+    flex: 1 1 250px;
+    background: white;
+    padding: 1rem;
+    border: 2px solid rgb(22, 156, 4);
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgb(119, 118, 118);
+}
+
+.card h3 {
+    margin-bottom: 0.5rem;
+    color: #265804;
+    font-family:inherit;
+    font-style: italic;
+}
+
+.card-button {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    background: #07a121;
+    color: white;
+    border: black 1px solid;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.card-button:hover {
+    opacity: 0.8;
+    color:#1c3d5a;
+}
+
+
+
+/* RESPONSIVE GRID FOR MOBILE */
+@media (max-width: 700px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+    }
+    .navigation ul {
         flex-direction: column;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        margin: 10px;
-        padding: 10px;
-        background-color: #ffffff;}
-
-/* Card Design */
-        .background{
-            boarder:
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  }
-        .nav-toggle-label{
-            display: block;
-            width: 30px;
-            height: 25px;
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            z-index: 10
-            cursor: pointer;} 
-        .nav-toggle-label span,
-        .nav-toggle-label span::before, 
-        .nav-toggle-label span::after{
-            content: attr();
-            display: block;
-            background: #fff;
-            height: auto;
-            width: 100%;
-            border-radius: 2px;
-            transition: all 0.3s ease-in-out;}
-
-        .nav-toggle-label span::before{
-            position: absolute;
-            top: -10px;}
-        .nav-toggle-label span::after{
-            position: absolute; 
-            top: 10px;}
-        
-/* Hide Navigation Mobile */
-            .navigation{
-                display: none;
-                flex-direction: column;
-                gap:0.5 rem;
-                padding: 1rem;}
-
-/* Show Navigation */
-                .nav-toggle-checked-nav{
-                    display: flex;}
-
-/* close shape */
-                .nav-toggle-checked-nav .nav-toggle-label span{
-                    transform: rotate (45 deg);}
-                .nav-toggle-checked-nav .nav-toggle-label span::before{
-                    transform: rotate(45deg);
-                    translate(-10px, 0px);
-                    top:0;}
-                .nav-toggle-checked-nav .nav-toggle-label span::after{
-                    opacity: 0;}
-                .card title{
-                    font-size: 1.5rem;
-                    font-weight: bold;
-                    margin-bottom: 0.5rem;
-                    color: #333333;}
-                .card-subtitle{
-                    font-size: 1rem;
-                    color: #777777;
-                    margin-bottom: 1rem;}
-                .card-price{
-                    font: shape;
-                    font-weight: ;
-                    color: #4CAF50;
-                    margin-top: auto;}
-
-        @media (min-width: 768px){
-            grid-template-columns: 1 fr;
-            grid-template-rows: auto auto 1fr auto;
-
-            grid-template-areas:
-                "header"
-                "nav"
-                "main"
-                "sidebar"
-                "footer";}
-
-
-            
-
+        align-items: center;
+    }
+}
