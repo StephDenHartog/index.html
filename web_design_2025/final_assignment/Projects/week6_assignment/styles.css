@@ -1,0 +1,80 @@
+/* Default (Light Mode) Theme */
+:root {
+    --bg-color: #fff8f8;
+    --text-color: #222;
+    --primary-color: #00205B;
+    --accent-color: #BA0C2F;
+    --border-color: #ddd;
+    --blockquote-bg: rgba(244, 162, 162, 0.8);
+    --blockquote-text: #BA0C2F;
+}
+
+/* Base Styles */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 2em;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Headings */
+h1 {
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 12px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h2 {
+    border-bottom: 2px solid var(--border-color);
+    color: var(--accent-color);
+    margin-top: 1.5em;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+/* Blockquote */
+blockquote {
+    background-color: var(--blockquote-bg);
+    color: var(--blockquote-text);
+    padding: 1em;
+    border-left: 6px solid var(--primary-color);
+    font-style: italic;
+    margin: 1.5em 0;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Lists */
+ul, ol {
+    padding-left: 1.5em;
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Dark Mode Theme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121212;
+        --text-color: #f6f6f6;
+        --primary-color: #4f7fff;
+        --accent-color: #ffb3b3;
+        --border-color: #555;
+        --blockquote-bg: rgba(60, 60, 60, 0.8);
+        --blockquote-text: #ffd9d9;
+    }
+}

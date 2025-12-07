@@ -1,0 +1,172 @@
+/*  Base  */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*  Color */
+:root {
+   --primary-color: #061fc1;
+    --secondary-color: #07b61e;
+    --background-color: #F5F7FA;
+    --text-color: #333333;
+    --font:var(--font) segoe ui, tahoma, sans-serif; 
+}
+
+
+/* Dark Mode */
+   @media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1E1E1E;
+        --text-color: #F5F5F5;
+    }
+}
+  
+/* Styles */
+body {
+    font-family: var(--font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    Text-align: center;
+}
+
+/* Header  */
+header {
+  background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+  background-image: url(https://www.transparenttextures.com/patterns/cubes.png); 
+  background-size: contain;
+}
+.header-content img {
+   width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid; color :#333333
+  object-fit: cover;
+}
+
+/* images*/
+img {
+  width: 200px;        
+  height: 200px;
+  border-radius: 50%;  
+  object-fit: cover;   
+  border: 4px solid; color :#333333
+}
+
+/* Nav */
+nav {
+    background-color: var(--secondary-color);
+    display: flex;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;}
+
+nav a:hover {
+    background-color: rgba(240, 17, 17, 0.475);
+    padding: 0.5rem;}
+
+nav a.active {
+  background: var(--accent);
+  color: #f70e40;
+}
+/*  Hero  */
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Layout */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+section {
+  margin: 2rem auto;
+}
+
+
+/* Portfolio  */
+article {
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 1.0rem;
+    padding-bottom: 1.0rem;
+    text-align: center;
+}
+.project-img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 3px;
+  margin-bottom: 0.5rem;
+  filter: grayscale(100%);
+  transition: all 0.5s;
+}
+
+.project-img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* contact form  */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  color: whitesmoke;
+  
+}
+
+/*  Buttons  */
+button {
+  background: var(--accent);
+  color: #288104;
+  border: none;
+  padding: 0.9rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Footer  */
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position:relative
+  bottom:0;
+  width:100%;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .header-content img {
+    width: 80px;
+    height: 80px;
+  }
+  main {
+    padding: 0.5rem;
+  }
+}
+
