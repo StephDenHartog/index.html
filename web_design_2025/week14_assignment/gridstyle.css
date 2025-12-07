@@ -13,29 +13,28 @@ body {
     grid-area: main;
     background: white;     
     padding: 1.5rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px black;
 }
 
 /* Heading */
 .main-content h2 {
     color: #3f8d57;
-    margin-bottom: 0.5rem;
-    }
-
-/* Body text spacing */
+    margin-bottom: 0.5rem;}
+    
+/* Body text */
 .main-content p {
     line-height: 1.5;
     margin-bottom: 1rem;
 }
 
-/* Blockquote box */
+/* Blockquote */
 .info-box {
     background: #e5e6e8;                 
     padding: 1rem;
     border-left: 4px solid #05a73e;        
     margin-top: 1rem;
-    border-radius: 6px;
+    border-radius: 16px;
 }
 
 /* Grid Container */
@@ -71,7 +70,10 @@ body {
     grid-area: sidebar;
     background: #eeeeee;
     padding: 1rem;
-    border-radius: 3px
+    border-radius: 15px;
+    border-color: rgb(203, 199, 199);
+    border-style: solid;
+    border-width: 1px;  
 }
 
 .grid-item.main-content {
@@ -110,7 +112,7 @@ body {
     font-family:cursive;
 }
 .navigation a {
-    color: rgb(7, 39, 247);
+    color: blue;
     text-decoration: none;
     font-weight: bold;
 }
@@ -131,7 +133,7 @@ body {
     flex: 1 1 250px;
     background: white;
     padding: 1rem;
-    border: 2px solid rgb(22, 156, 4);
+    border: 2px solid rgb(3, 145, 3);
     border-radius: 8px;
     box-shadow: 2px 2px 6px rgb(119, 118, 118);
 }
@@ -160,7 +162,7 @@ body {
 
 
 
-/* RESPONSIVE GRID FOR MOBILE */
+/* Responsive Grid Mobile */
 @media (max-width: 700px) {
     .grid-container {
         grid-template-columns: 1fr;
