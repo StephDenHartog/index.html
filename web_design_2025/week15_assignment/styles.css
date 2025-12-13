@@ -1,12 +1,5 @@
-/* ------------------------------
-   GOOGLE FONTS
------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@400;600&family=Quicksand:wght@400;600&display=swap');
 
-
-/* ------------------------------
-   CSS VARIABLES
------------------------------- */
+/* CSS VARIABLES */
 :root {
   --pink: #ffd6e8;
   --cream: #fff9f2;
@@ -207,7 +200,7 @@ footer {
 
 /* HOMEPAGE – Rolling Pin Background */
 body.homepage {
-  background-image:url("images/backgrounds/rollingpin.png");
+  background-image:url;
   background-size:300px;
   background-repeat:repeat;
   background-color:var(--cream);
@@ -231,29 +224,3 @@ body.holiday h2 {
   letter-spacing:1px;
 }
 
-
-/* Pine divider */
-.holiday-divider{
-  text-align:center;
-  margin:2rem 0;
-  font-size:2rem;
-  opacity:.7;
-}
-
-
-/* NO animation snowflakes */
-body.holiday::before{
-  content:"🌿 ❄ 🌿";
-  position:absolute;
-  top:1rem;
-  left:1rem;
-  opacity:.5;
-}
-
-body.holiday::after{
-  content:"🌿 ❄ 🌿";
-  position:absolute;
-  bottom:1rem;
-  right:1rem;
-  opacity:.4;
-}
