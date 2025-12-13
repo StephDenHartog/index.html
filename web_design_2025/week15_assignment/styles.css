@@ -1,5 +1,6 @@
-
-/* CSS VARIABLES */
+/* ==============================
+   CSS VARIABLES
+============================== */
 :root {
   --pink: #ffd6e8;
   --cream: #fff9f2;
@@ -11,27 +12,33 @@
 }
 
 
-/* GLOBAL RESET */
+/* ==============================
+   RESET & BASE STYLES
+============================== */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: "Quicksand", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.6;
   color: #333;
+  background-color: var(--cream);
 }
 
-/* Focus visible – accessibility */
+/* Accessibility */
 :focus-visible {
   outline: 3px dashed var(--accent);
   outline-offset: 4px;
 }
 
 
-/* NAV */
+/* ==============================
+   NAVIGATION (FLEXBOX)
+============================== */
 nav {
   background-color: var(--pink);
   padding: 1rem;
@@ -40,28 +47,53 @@ nav {
 }
 
 .nav {
-  display: flex;
   list-style: none;
+  display: flex;
   gap: 1rem;
 }
 
 nav a {
   text-decoration: none;
-  padding: .25rem .5rem;
   font-weight: 600;
-  border-radius: 50px;
   color: #333;
-  transition: background .2s ease;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 nav a:hover,
 nav a:focus-visible {
   background-color: var(--accent);
-  color: white;
+  color: #fff;
+}
+
+/* Home Page Only*/
+.site-logo {
+  max-width: 160px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.25rem; /* very small space below logo */
+  margin-bottom: 0;
+}
+
+.tagline {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  font-style: italic; 
+  font-size: bolder ;
+  color: #555;
+  text-align: center;
+  font-size: larger;
+
+}
+
 }
 
 
-/* HEADER */
+/* ==============================
+   HEADER (DEFAULT – ALL PAGES)
+============================== */
 .site-header {
   background: linear-gradient(135deg, var(--mint), var(--sky));
   padding: 2rem 1rem;
@@ -69,24 +101,45 @@ nav a:focus-visible {
 }
 
 .site-header h1 {
-  font-family: "Pacifico", cursive;
   font-size: 2.5rem;
   color: #444;
+
+  /* readable background behind text */
+  background-color: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
 }
 
 .tagline {
+  margin-top: 0;
   font-style: italic;
-}
-
-/* Logo */
-.logo {
-  width: 80px;
-  display: block;
-  margin: 0 auto;
+  color: #555;
 }
 
 
-/* MAIN GRID/SECTIONS */
+/* ==============================
+   HOLIDAY PAGE HEADER ONLY
+============================== */
+body.holiday .site-header {
+  background-image: url("images/background/lights.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 2.rem;
+}  
+
+  /* fallback color for accessibility */
+  background-color: #e9f3ff;
+
+
+
+
+
+
+/* ==============================
+   MAIN CONTENT
+============================== */
 main {
   max-width: 1100px;
   margin: auto;
@@ -94,43 +147,51 @@ main {
 }
 
 .section {
-  background: white;
+  background-color: #fff;
   padding: 2rem;
   margin: 1rem 0;
   border-radius: 15px;
-  box-shadow: 0 0 8px #0001;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
 }
 
 
-/* GRIDS */
+/* ==============================
+   GRID LAYOUTS
+============================== */
 .grid-3,
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
 }
 
 
-/* CARDS */
+/* ==============================
+   CARDS + ANIMATION
+============================== */
 .card {
-  background: var(--lilac);
+  background-color: var(--lilac);
   padding: 1rem;
-  text-align:center;
   border-radius: 15px;
-  box-shadow: 0 2px 8px #0002;
-  transition: transform .15s ease;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* Images */
 .card img {
-  width:100%;
-  border-radius:10px;
+  width: 100%;
+  height: 180px;           /* forces equal height */
+  object-fit: cover;       /* crops nicely */
+  border-radius: 12px;
+  display: block;
 }
+
 
 /* Animation requirement */
 @keyframes floatUp {
-  0%{ transform:translateY(0);}
-  50%{transform:translateY(-6px);}
-  100%{transform:translateY(0);}
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
 }
 
 .card:hover {
@@ -138,89 +199,83 @@ main {
 }
 
 
-/* BUTTON */
+/* ==============================
+   BUTTONS
+============================== */
 button {
-  background: var(--sky);
-  padding:.6rem 1rem;
-  border:none;
-  border-radius:10px;
-  cursor:pointer;
-  font-weight:600;
+  background-color: var(--sky);
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-button:hover {
-  background: var(--accent);
-  color:white;
+button:hover,
+button:focus-visible {
+  background-color: var(--accent);
+  color: #fff;
 }
 
 
-/* TABLE */
+/* ==============================
+   TABLES (PRODUCTS PAGE)
+============================== */
 table {
-  width:100%;
-  margin:1rem 0 2rem;
-  border-collapse:collapse;
-  background:white;
-  border-radius:15px;
-  box-shadow:0 0 8px #0002;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 2rem;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0,0,0,0.08);
 }
 
-th,td {
-  border:1px solid var(--pink);
-  padding:.75rem;
+th,
+td {
+  border: 1px solid var(--pink);
+  padding: 0.75rem;
+  text-align: left;
 }
 
-thead { background:var(--pink); }
-tbody tr:nth-child(even){
-  background:#fff1f6;
+thead {
+  background-color: var(--pink);
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fff1f6;
 }
 
 
-/* CONTACT FORM */
-form{
-  display:grid;
-  gap:.75rem;
-  max-width:400px;
+/* ==============================
+   CONTACT FORM
+============================== */
+form {
+  max-width: 400px;
+  display: grid;
+  gap: 0.75rem;
 }
 
-label{ font-weight:600;}
-
-input,textarea{
-  border:2px solid var(--pink);
-  border-radius:10px;
-  padding:.5rem;
+label {
+  font-weight: 600;
 }
 
-/* FOOTER */
+input,
+textarea {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 2px solid var(--pink);
+  font-family: inherit;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
 footer {
-  background: var(--pink);
-  text-align:center;
-  padding:1.5rem;
+  background-color: var(--pink);
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
 }
-
-
-/* HOMEPAGE – Rolling Pin Background */
-body.homepage {
-  background-image:url;
-  background-size:300px;
-  background-repeat:repeat;
-  background-color:var(--cream);
-}
-
-
-/* HOLIDAY PAGE */
-body.holiday{
-  background-color:#f7f9fc;
-  background-image:
-    linear-gradient(90deg,rgba(255,255,255,0.6)1px,transparent 1px),
-    linear-gradient(rgba(255,255,255,0.6)1px,transparent 1px);
-  background-size:40px 40px;
-}
-
-/* Scandinavian headings */
-body.holiday h1,
-body.holiday h2 {
-  font-family:"Playfair Display", serif;
-  color:var(--winter-blue);
-  letter-spacing:1px;
-}
-
