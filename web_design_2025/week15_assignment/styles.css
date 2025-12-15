@@ -1,16 +1,7 @@
-/*    CSS VARIABLES*/
-:root {
-  --pink: #ffd6e8;
-  --cream: #fff9f2;
-  --sky: #b3e5fc;
-  --mint: #d8f3dc;
-  --lilac: #e6e6fa;
-  --accent: #ff9ebb;
-  --winter-blue: #3e5c76;
-}
 
 
-/* RESET & BASE STYLES */
+
+/*  RESET & BASE STYLES*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -21,8 +12,8 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
                Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: var(--cream);
+  color: #313132;
+  background-color: bisque;
 }
 
 /* Accessibility */
@@ -32,10 +23,57 @@ body {
 }
 
 
+/*  HEADER (ALL PAGES)*/
+.site-header {
+  background: var(--sky);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.site-header h1 {
+  font-size: 3.5rem;
+  color: #7086e0;
+  background-color: rgba(250, 251, 253, 0.8);
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+}
+
+
+/* HOME PAGE ELEMENTS */
+.site-logo {
+  max-width: 160px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.tagline {
+  margin: 0.25rem 0 0.15rem;
+  font-style: italic;
+  font-size: larger;
+  color: #1c1a1a;
+  background-color: aqua;
+  text-align: center;
+}
+
+
+/* HOLIDAY PAGE HEADER ONLY */
+body.holiday .site-header {
+  background-image: url("images/background/lights.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 2rem;
+  background-color: var(--winter-blue); /* fallback */
+}
+
+
 /* NAVIGATION (FLEXBOX)*/
 nav {
-  background-color: var(--pink);
-  padding: 1rem;
+  background-color: lightskyblue;
+  padding: 2rem;
   display: flex;
   justify-content: center;
 }
@@ -61,66 +99,8 @@ nav a:focus-visible {
   color: #fff;
 }
 
-/* Home Page Only*/
-.site-logo {
-  max-width: 160px;
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 0.25rem; 
-  margin-bottom: 0;
-}
 
-.tagline {
-  margin-top: 0.25rem;
-  margin-bottom: 1rem;
-  font-style: italic; 
-  font-size: bolder ;
-  color: #555;
-  text-align: center;
-  font-size: larger;
-
-}
-
-/* HEADER all pages*/
-.site-header {
-  background: linear-gradient(135deg, var(--mint), var(--sky));
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-.site-header h1 {
-  font-size: 2.5rem;
-  color: #444;
-
-  /* readable background behind text */
-  background-color: rgba(255, 255, 255, 0.8);
-  display: inline-block;
-  padding: 0.5rem 1.25rem;
-  border-radius: 20px;
-}
-
-.tagline {
-  margin-top: 0;
-  font-style: italic;
-  color: #555;
-}
-
-
-/* HOLIDAY PAGE HEADER ONLY */
-body.holiday .site-header {
-  background-image: url("images/background/lights.webp");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding-bottom: 2.rem;
-}  
-
-  /* fallback color for accessibility */
-  background-color: var(--winter-blue);
-
-
-/* MAIN CONTENT */
+/* MAIN CONTENT*/
 main {
   max-width: 1100px;
   margin: auto;
@@ -136,7 +116,7 @@ main {
 }
 
 
-/* GRID LAYOUTS*/
+/*    GRID LAYOUTS*/
 .grid-3,
 .product-grid {
   display: grid;
@@ -145,42 +125,27 @@ main {
 }
 
 
-
-/*   CARDS + ANIMATION*/
-
+/*    CARDS */
 .card {
-  background-color: var(--lilac);
+  background-color: skyblue;
   padding: 1rem;
   border-radius: 15px;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Images */
 .card img {
   width: 100%;
-  height: 180px;          
-  object-fit: cover;      
+  height: 180px;
+  object-fit: cover;
   border-radius: 12px;
   display: block;
 }
 
 
-/* Animation requirement */
-@keyframes floatUp {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-6px); }
-  100% { transform: translateY(0); }
-}
-
-.card:hover {
-  animation: floatUp 1.8s ease-in-out infinite;
-}
-
-
-/*  BUTTONS*/
+/*   BUTTONS*/
 button {
-  background-color: var(--sky);
+  background-color: darkcyan);
   border: none;
   padding: 0.6rem 1rem;
   border-radius: 10px;
@@ -192,11 +157,11 @@ button {
 button:hover,
 button:focus-visible {
   background-color: var(--accent);
-  color: #fff;
+  color: lightskyblue;
 }
 
 
-/* TABLE PRODUCTS PAGE */
+/*   TABLES (PRODUCTS PAGE)*/
 table {
   width: 100%;
   border-collapse: collapse;
@@ -209,41 +174,74 @@ table {
 
 th,
 td {
-  border: 1px solid var(--pink);
+  border: 1px solid var(--blue);
   padding: 0.75rem;
   text-align: left;
 }
 
 thead {
-  background-color: var(--pink);
+  background-color: lightblue);
 }
 
 tbody tr:nth-child(even) {
-  background-color: #fff1f6;
+  background-color: #b8cef8;
 }
 
 
-/*  CONTACT FORM */
+/* CONTACT PAGE*/
+body.contact-page {
+  background-repeat: repeat;
+}
+
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  
+}
+
+.contact-box {
+  background-color: #bedffd;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+}
+
 form {
   max-width: 400px;
   display: grid;
   gap: 0.75rem;
 }
 
+.form-group {
+  margin-bottom: 1rem;
+}
+
 label {
+  display: block;
   font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 input,
 textarea {
+  width: 100%;
   padding: 0.5rem;
   border-radius: 10px;
-  border: 2px solid var(--pink);
+  border: 2px solid var(--blue);
   font-family: inherit;
 }
 
+textarea {
+  min-height: 120px;
+}
 
-/*  FOOTER*/
+
+/* FOOTER*/
 footer {
   background-color: var(--pink);
   padding: 1.5rem;
