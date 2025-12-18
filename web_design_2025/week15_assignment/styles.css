@@ -145,7 +145,7 @@ main {
 
 /*   BUTTONS*/
 button {
-  background-color: darkcyan);
+  background-color: darkcyan;
   border: none;
   padding: 0.6rem 1rem;
   border-radius: 10px;
@@ -156,8 +156,8 @@ button {
 
 button:hover,
 button:focus-visible {
-  background-color: var(--accent);
-  color: lightskyblue;
+  background-color: orange;
+  color: rgb(3, 48, 77);
 }
 
 
